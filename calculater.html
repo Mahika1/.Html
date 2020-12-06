@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="icon" href="https://www.pngfind.com/pngs/m/11-111898_feather-apache-logo-png-transparent-png.png">
+    <style>
+        body{
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/952/536/1006/winter-4k-pc-desktop-wallpaper-preview.jpg");
+            background-size: cover;
+            margin-top: 10%;
+            margin-left: 30%;
+        }
+        #a{
+            height: 80px;
+            width: 490px;
+            font-size: 42px;
+            text-align: right;
+            background-color: darkblue;
+            color: wheat;
+        }
+        #b{
+            height: 75px;
+            width: 120px;
+            font-size: 30px;
+            font-weight: bold;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: rgb(110, 110, 235);
+        }
+        #c{
+            height: 75px;
+            width: 120px;
+            font-size: 30px;
+            font-weight: bold;
+            border: none;
+            background-color: rgba(255, 69, 0, 0.5);
+            color: rgb(87, 12, 12);
+        }
+        #d{
+            height: 75px;
+            width: 120px;
+            font-size: 40px;
+            font-weight: bold;
+            border: none;
+            background-color: rgba(112, 160, 17, 0.5);
+            color: rgb(68, 64, 64);
+        }
+        #b:hover,#c:hover,#d:hover{
+            background-color: black;
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" name="" id="a" placeholder="0">
+    </form>
+   <table>
+       <tr>
+           <td>
+               <input type="button" value="9" id="b" onclick="enterValue(9)">
+           </td>
+           <td>
+            <input type="button" value="8" id="b" onclick="enterValue(8)">
+           </td>
+           <td>
+            <input type="button" value="7" id="b" onclick="enterValue(7)">
+          </td>
+          <td>
+            <input type="button" value="+" id="c" onclick="enterValue('+')">
+          </td>
+       </tr>
+       <tr>
+        <td>
+            <input type="button" value="6" id="b" onclick="enterValue(6)">
+        </td>
+        <td>
+           <input type="button" value="5" id="b" onclick="enterValue(5)">
+        </td>
+        <td>
+           <input type="button" value="4" id="b" onclick="enterValue(4)">
+       </td>
+       <td>
+           <input type="button" value="-" id="c" onclick="enterValue('-')">
+       </td>
+      </tr>
+      <tr>
+        <td>
+            <input type="button" value="3" id="b" onclick="enterValue(3)">
+        </td>
+        <td>
+           <input type="button" value="2" id="b" onclick="enterValue(2)">
+        </td>
+        <td>
+           <input type="button" value="1" id="b" onclick="enterValue(1)">
+       </td>
+       <td>
+           <input type="button" value="x" id="c" onclick="enterValue('*')">
+       </td>
+      </tr>
+      <tr>
+        <td>
+            <input type="button" value="C" id="d" onclick="clearInput()">
+        </td>
+        <td>
+           <input type="button" value="0" id="b" onclick="enterValue(0)">
+        </td>
+        <td>
+           <input type="button" value="=" id="d" onclick="calculate()">
+       </td>
+       <td>
+           <input type="button" value="/" id="c" onclick="enterValue('/')">
+       </td>
+      </tr>
+   </table>
+  <script>
+    //  var abc = "Welcome";
+       function enterValue(abc){
+           document.getElementById("a").value = document.getElementById("a").value + abc;
+       }
+       function calculate(){
+            var bcd = document.getElementById("a").value;
+            document.getElementById("a").value = eval(bcd);
+       }
+       function clearInput(){
+        document.getElementById("a").value = "";
+       }
+      // enterValue("Hello & Welcome");
+  </script>
+</body>
+</html>
